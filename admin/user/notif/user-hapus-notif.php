@@ -19,6 +19,40 @@
             </div>
         </div>
 
+<?php
+function notif($r1,$r2,$r3,$r4,$r5,$r7){
+?>
+                <div class="col-sm-12">
+                <div class="alert <?php echo $r1; ?> alert-dismissible fade show" role="alert">
+                  <span class="badge badge-pill <?php echo $r2; ?>"><?php echo $r3; ?></span> <?php echo $r4; ?>.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Proses</strong> Hapus User
+                            </div>
+                            <div class="card-body card-block">
+
+
+                <form action="<?php echo $r5; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">    
+                   
+                        <button type="submit" class="btn btn-primary btn-sm" href= >
+                           <?php echo $r7; ?>
+                          </button>
+                          </form>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+            <?php
+
+}
+?>
 
 <?php
 if (isset($_GET['username']))
@@ -51,36 +85,14 @@ if (isset($_GET['username']))
 }
 else
 {
-   ?>
-        <div class="col-sm-12">
-                <div class="alert  alert-danger alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-danger">Gagal!</span> Maaf Anda Sebelumnya Harus Mengakses Halaman Ini Pada Form User.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-
-        <div class="content mt-3">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                        <strong>Proses</strong> Hapus User
-                        </div>
-                            <div class="card-body card-block">
-       
-
-        <form action="index.php" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-        <?php
+  $not1 = "badge-danger";
+  $not2 = "Gagal!";
+  $not3 = "Maaf anda sebelumnya harus mengakses halaman ini pada tabel user";
+  $not4 = "index.php";
+  $not6 = "Kembali";
+  $not7 = "alert-danger";
+  notif($not7,$not1,$not2,$not3,$not4,$not6);
+   
 } 
+?>
+ 
